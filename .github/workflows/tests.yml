@@ -26,7 +26,7 @@ jobs:
                   cd build
                   cmake ..
                   make
-                  ./calculator add 1 2
+                  ./src/calculator add 1 2
     test_sub:
         runs-on: ubuntu-latest
         steps:
@@ -39,7 +39,7 @@ jobs:
                   cd build
                   cmake ..
                   make
-                  ./calculator sub 2 1
+                  ./src/calculator sub 2 1
     test_mul:
         runs-on: ubuntu-latest
         steps:
@@ -52,7 +52,7 @@ jobs:
                   cd build
                   cmake ..
                   make
-                  ./calculator mul 2 2
+                  ./src/calculator mul 2 2
     test_div:
         runs-on: ubuntu-latest
         steps:
@@ -65,7 +65,7 @@ jobs:
                   cd build
                   cmake ..
                   make
-                  ./calculator div 4 2
+                  ./src/calculator div 4 2
     test_car:
         runs-on: ubuntu-latest
         steps:
@@ -78,4 +78,4 @@ jobs:
                   cd build
                   cmake ..
                   make
-                  ./calculator car 2
+                  ./src/calculator car 2
