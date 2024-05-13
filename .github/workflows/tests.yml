@@ -15,6 +15,7 @@ jobs:
                     make
                     make test
     test_add:
+        needs: Compilation
         runs-on: ubuntu-latest
         steps:
             - name: Test de l'addition
@@ -28,6 +29,7 @@ jobs:
                   make
                   ./src/calculator add 1 2
     test_sub:
+        needs: Compilation
         runs-on: ubuntu-latest
         steps:
             - name: Test Fonction sub
@@ -41,6 +43,7 @@ jobs:
                   make
                   ./src/calculator sub 2 1
     test_mul:
+        needs: Compilation
         runs-on: ubuntu-latest
         steps:
             - name: Test Fonction mul
@@ -54,6 +57,7 @@ jobs:
                   make
                   ./src/calculator mul 2 2
     test_div:
+        needs: Compilation
         runs-on: ubuntu-latest
         steps:
             - name: Test Fonction div
@@ -67,6 +71,7 @@ jobs:
                   make
                   ./src/calculator div 4 2
     test_car:
+        needs: Compilation
         runs-on: ubuntu-latest
         steps:
             - name: Test Fonction car
