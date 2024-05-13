@@ -1,4 +1,5 @@
 #include "./../../include/calculator.h"
+#include <math.h>
 
 double _add(double a, double b) {
 	return a+b;
