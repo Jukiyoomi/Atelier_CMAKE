@@ -84,3 +84,10 @@ jobs:
                   cmake ..
                   make
                   ./src/calculator car 2
+
+    deploy:
+        needs: [test_add, test_sub, test_mul, test_div, test_car]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy
+              run: echo "Deploying youpi ca fonctionne je suis un automatisateur de tests mtn !"
