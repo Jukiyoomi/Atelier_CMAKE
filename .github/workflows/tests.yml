@@ -1,16 +1,81 @@
 name: Automatisation des tests
 on: push
 jobs:
-  Compilation:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Compilation
-        run: |
-          last_directory=$(basename ${{ runner.workspace }})
-          git clone https://github.com/${{ github.repository }}.git
-          cd ./$last_directory
-          mkdir build
-          cd build
-          cmake ..
-          make
-          make test
+    Compilation:
+        runs-on: ubuntu-latest
+        steps:
+            -   name: Compilation
+                run: |
+                    last_directory=$(basename ${{ runner.workspace }})
+                    git clone https://github.com/${{ github.repository }}.git
+                    cd ./$last_directory
+                    mkdir build
+                    cd build
+                    cmake ..
+                    make
+                    make test
+    test_add:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test de l'addition
+              run: |
+                  last_directory=$(basename ${{ runner.workspace }})
+                  git clone https://github.com/${{ github.repository }}.git
+                  cd ./$last_directory
+                  mkdir build
+                  cd build
+                  cmake ..
+                  make
+                  ./calculator add 1 2
+    test_sub:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test Fonction sub
+              run: |
+                  last_directory=$(basename ${{ runner.workspace }})
+                  git clone https://github.com/${{ github.repository }}.git
+                  cd ./$last_directory
+                  mkdir build
+                  cd build
+                  cmake ..
+                  make
+                  ./calculator sub 2 1
+    test_mul:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test Fonction mul
+              run: |
+                  last_directory=$(basename ${{ runner.workspace }})
+                  git clone https://github.com/${{ github.repository }}.git
+                  cd ./$last_directory
+                  mkdir build
+                  cd build
+                  cmake ..
+                  make
+                  ./calculator mul 2 2
+    test_div:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test Fonction div
+              run: |
+                  last_directory=$(basename ${{ runner.workspace }})
+                  git clone https://github.com/${{ github.repository }}.git
+                  cd ./$last_directory
+                  mkdir build
+                  cd build
+                  cmake ..
+                  make
+                  ./calculator div 4 2
+    test_car:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test Fonction car
+              run: |
+                  last_directory=$(basename ${{ runner.workspace }})
+                  git clone https://github.com/${{ github.repository }}.git
+                  cd ./$last_directory
+                  mkdir build
+                  cd build
+                  cmake ..
+                  make
+                  ./calculator car 2
